@@ -1,0 +1,232 @@
+/* About Section Styling */
+#about {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 40px 20px; /* Add space inside the section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 30px 0; /* Space between sections */
+  text-align: center; /* Center align text */
+}
+
+#about h2 {
+  font-size: 1.8em; /* Larger heading for prominence */
+  margin-bottom: 10px; /* Add space below the heading */
+}
+
+#about p {
+  font-size: 1em; /* Standard font size for readability */
+  color: #555; /* Softer text color */
+  line-height: 1.6; /* Add breathing space between lines */
+}
+
+/* Projects Section Styling */
+#projects {
+  background-color: #ffffff; /* White background for contrast */
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+
+}
+
+#projects h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-align: center; /* Center the section title */
+}
+
+#projects p {
+  font-size: 1em;
+  color: #666; /* Neutral text color */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling Each Project */
+.project {
+  background-color: #f4f4f4; /* Light gray for individual project cards */
+  padding: 15px; /* Space inside each card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 10px 0; /* Space between projects */
+  display: flex; /* Arrange items horizontally */
+  align-items: center; /* Center-align image and text */
+  gap: 15px; /* Space between image and text */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project img {
+  width: 100px; /* Set a fixed width for images */
+  height: 100px; /* Set a fixed height for images */
+  border-radius: 8px; /* Rounded corners */
+  object-fit: cover; /* Keep images proportionate */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add depth */
+  transition: transform 0.3s ease; /* Smooth animation for scaling */
+}
+
+.project h3 {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.project h3 a {
+  text-decoration: none; /* Remove underline from links */
+  color: #007BFF; /* Blue link color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.project h3 a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.project p {
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.4;
+}
+
+.project:hover {
+transform: scale(1.03); /* Slightly larger, Smoother scale */
+border: 2px solid #007BFF;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer Shadow */
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */  
+}
+
+.project:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */ 
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color:white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-3px); /* Lift the button slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft Shadow */
+}
+
+/* Hover Test Box */
+.hover-test {
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(to right, #007BFF, #00FF7F);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+}
+
+.hover-test p {
+  font-size: 2em;
+  color: #333;
+}
+
+.hover-test:hover {
+  background-color: #007BFF;
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon {
+  display: none; /* Hides it on desktop */
+  font-size: 2em;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px;
+}
+
+
+/*Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column; /* Stack projects instead of side by side */
+    text-align: center;
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+
+.project img{
+  width: 80%; /* Reduce image size for mobile */
+  margin: 0 auto; /* Center images */
+}
+
+nav {
+  display: none; /* Hide menu by default */
+  flex-direction: column; /* Stack nav links */
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+ }
+
+ nav a:hover {
+  background-color: #007BFF;
+  color: #007BFF;
+ }
+
+ .show-menu {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  gap: 15px; /* Add spacing between links only when menu is open */
+ }
+
+ .menu-icon {
+  display: block; /* Show the mneu icon only on small screens */
+ }
+
+ h1 {
+  font-size: 1.8em; /* Slightly smaller for mobile */
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6;
+  padding: 0 10px; /* Prevents text from touching edges */
+}
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.8;
+}
+
+h1, h2 {
+  font-weight:600;
+  Text-align:center;
+}
+
+p {
+  font-weight: 300;
+}
